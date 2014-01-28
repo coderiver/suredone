@@ -32,7 +32,7 @@ html ::-moz-scrollbar-track-piece { background: #e1e1e1; }
 html ::-webkit-scrollbar-track-piece { background: #e1e1e1; }
 html ::scrollbar-track-piece { background: #e1e1e1; }
 
-body { min-width: 320px; font-family: "Asap", Arial, sans-serif; color: #3b414e; font-size: 14px; font-weight: 400; background: white; }
+body { min-width: 480px; font-family: "Asap", Arial, sans-serif; color: #3b414e; font-size: 14px; font-weight: 400; background: white; }
 
 a { text-decoration: none; }
 
