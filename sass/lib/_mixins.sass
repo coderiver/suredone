@@ -48,17 +48,20 @@ $breaklarge: 1180px
 	+background-image(linear-gradient(left, $color1, $color2))
 
 //asdfast font-family
-=font($alias, $name)
-	@font-face
-		font-family: $alias
-		src: url("fonts/" + $name + ".eot")
-		src: url("fonts/" + $name + ".eot?#iefix") format("embedded-opentype"), url("fonts/" + $name + ".woff") format("woff"), url("fonts/" + $name + ".ttf") format("truetype")
-		font-weight: normal
-		font-style: normal
+// =font($alias, $name)
+// 	@font-face
+// 		font-family: $alias
+// 		src: url("fonts/" + $name + ".eot")
+// 		src: url("fonts/" + $name + ".eot?#iefix") format("embedded-opentype"), url("fonts/" + $name + ".woff") format("woff"), url("fonts/" + $name + ".ttf") format("truetype")
+// 		font-weight: normal
+// 		font-style: normal
 
 //+font(black, cytiapro-black-webfont)
-
-// ROTATE
+=font
+	font-family: 'Asap', Arial, sans-serif
+=font2
+	font-family: 'Montserrat', Arial, sans-serif
+// ROTATE 
 =rotate($deg: 0, $m11: 0, $m12: 0, $m21: 0, $m22: 0)
 	-moz-transform: rotate($deg + deg)
 	-o-transform: rotate($deg + deg)

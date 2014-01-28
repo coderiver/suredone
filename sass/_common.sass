@@ -1,49 +1,148 @@
-// # SHORT HOWTO
-// ## Sprites
-//     .whatever
-//          +sized-sprite($icons, coderiver) //or
-// 			+s(codedby) //gets default value for spritemap as $icons
-// ### animation example
-//     +include keyframes(rotate)
-//        from
-//           +rotate(0)
-//        to
-//           +rotate(360)
-// ## animation usage
-//     body:hover
-// 	    +animation(rotate 200s linear infinite)
-// ## animations easing, see easings.net for full list and examples, tnx @ai
-//     transition: all 1.2s ceaser($ease-in)
-// ## gradient example
-//     +background-image(linear-gradient(#232323, #5c5c5c));
-//     +g(#232323, #5c5c5c);
-//	   horizontal
-//     +gh(#232323, #5c5c5c);
-// ## making bw-images
-//     img
-//			@extend %gray
-// ## predefined media-queries: https://github.com/paranoida/sass-mediaqueries
-//     +min-screen(320)
-//			display: none
-// +max-screen(1000), +iphone5, +iphone4, +ipad-retina, +ipad, +hdpi - also available
-//
-// ## use cycles
-//     @for $i from 1 through 3
-//       .item-#{$i}
-//			width: 2em * $i;
-//     @each $s in a,b,c
-// 	    	#{$s}
-//				display: none
-// ## fonts 
-// Save fonts to /css/fonts, after that write (eot, woff, ttf):
-// +font(book, cytiapro-black-webfont)  
-// =book
-// 	font-family: "book",arial,sans-serif 
-	
+$red: #d75339
+$blue: #4f9fc5
+$blue_dark: #3d899e
+$green: #6db63a
+$violet_dark: #441a61
+$gray: #3b414e
+html
+	+scrollbar
+		width: 14px
+	+scrollbar-track	
+		background: #bec3c3
+	+scrollbar-thumb
+		background: #bec3c3
+	+scrollbar-track-piece 
+		background: #e1e1e1
 body
-	font-size: 12px 
-	font-family: Arial, sans-serif 
-	line-height: 1.4
+	min-width: 320px
+	+font
+	color: #3b414e 
+	font-size: 14px
+	font-weight: 400 
+	background: #fff
+a
+	text-decoration: none
+.l-layout	 
+	margin: 0 auto -390px
+	position: relative
+	min-height: 100%
+	height: auto !important
+	height: 100% 
+.wrapper
+	overflow: hidden
+.wrap
+	+clr
+.push
+	clear: both
+	height: 390px
+.l-container
+	margin: 0 auto 
+	+box
+	max-width: 1100px 
 
 
-// common blocks
+.header
+	background: #3B414E 
+	.l-container
+		position: relative
+		padding: 0 60px
+		+clr
+.header__top
+	padding: 12px 0 13px 
+	background: #4f9fc5
+	font-size: 16px
+	color: #fff
+.header__title
+	text-align: center
+.header__links
+	position: absolute
+	top: 0
+	right: 60px
+	a
+		color: #fff 
+	span
+		display: inline-block
+		margin: 0 13px 
+.header__logo
+	float: left
+	+s(logo)
+.header__main
+	padding: 26px 0 22px
+	border-bottom: 1px solid #363c47  
+.header__nav
+	overflow: hidden
+	padding-top: 10px
+	font-size: 0
+	text-align: right
+	a
+		display: inline-block
+		margin-left: 5.8%
+		font-size: 14px
+		color: #fff 
+		&:first-child
+			margin-left: 0
+		&.is-active
+			color: $blue 
+			
+.footer
+	position: relative
+	z-index: 2
+	background: #323a44 
+	color: #fff 
+	.l-container
+		position: relative
+		padding-left: 240px
+		height: 390px
+		+clr
+.footer__left
+	position: absolute
+	top: 0
+	bottom: 0
+	left: 0
+	padding-top: 48px
+	width: 240px
+	background: #4f9fc5 
+	.soc
+		padding-left: 11px 
+.footer__nav
+	margin-bottom: 34px
+	text-align: center
+	font-size: 14px
+	li
+		margin-bottom: 8px 	
+	a
+		color: #fff 
+.footer__main
+	padding: 45px 0 0 11%
+	overflow: hidden
+	+clr
+.footer__post-wrap
+	float: left
+	width: 47%
+.footer__title
+	margin-bottom: 29px
+	color: #e94a3e
+	font-size: 24px
+	font-weight: bold
+	text-transform: uppercase 
+.footer__post
+	margin-bottom: 28px
+	color: #fff 
+	font-size: 14px
+	a
+		color: $blue_dark 
+.footer__twitter-wrap
+	float: left
+	margin-left: 4%
+	width: 43%
+.twitter
+	+clr
+.twitter__img
+	float: left
+	margin-right: 13px
+.twitter__text
+	overflow: hidden
+	a
+		color: $green
+	.twitter__tag
+		color: $blue_dark 

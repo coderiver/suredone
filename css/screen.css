@@ -19,9 +19,92 @@ ul, ol { list-style-type: none; }
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) { * { -webkit-text-size-adjust: none; } }
 table { border-spacing: 0; border-collapse: collapse; width: 100%; }
 
-body { font-size: 12px; font-family: Arial, sans-serif; line-height: 1.4; }
+html ::-moz-scrollbar { width: 14px; }
+html ::-webkit-scrollbar { width: 14px; }
+html ::scrollbar { width: 14px; }
+html ::-moz-scrollbar-track { background: #bec3c3; }
+html ::-webkit-scrollbar-track { background: #bec3c3; }
+html ::scrollbar-track { background: #bec3c3; }
+html ::-moz-scrollbar-thumb { background: #bec3c3; }
+html ::-webkit-scrollbar-thumb { background: #bec3c3; }
+html ::scrollbar-thumb { background: #bec3c3; }
+html ::-moz-scrollbar-track-piece { background: #e1e1e1; }
+html ::-webkit-scrollbar-track-piece { background: #e1e1e1; }
+html ::scrollbar-track-piece { background: #e1e1e1; }
 
-.l { *zoom: 1; }
-.l:after { content: " "; display: table; clear: both; }
-.l .l-col1 { float: left; width: 20%; }
-.l .l-col2 { float: right; width: 70%; }
+body { min-width: 320px; font-family: "Asap", Arial, sans-serif; color: #3b414e; font-size: 14px; font-weight: 400; background: white; }
+
+a { text-decoration: none; }
+
+.l-layout { margin: 0 auto -390px; position: relative; min-height: 100%; height: auto !important; height: 100%; }
+
+.wrapper { overflow: hidden; }
+
+.wrap { *zoom: 1; }
+.wrap:after { content: " "; display: table; clear: both; }
+
+.push { clear: both; height: 390px; }
+
+.l-container { margin: 0 auto; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; max-width: 1100px; }
+
+.header { background: #3b414e; }
+.header .l-container { position: relative; padding: 0 60px; *zoom: 1; }
+.header .l-container:after { content: " "; display: table; clear: both; }
+
+.header__top { padding: 12px 0 13px; background: #4f9fc5; font-size: 16px; color: white; }
+
+.header__title { text-align: center; }
+
+.header__links { position: absolute; top: 0; right: 60px; }
+.header__links a { color: white; }
+.header__links span { display: inline-block; margin: 0 13px; }
+
+.header__logo { float: left; background: url('../img/icons-s4028758b17.png') 0 0 no-repeat; width: 224px; height: 41px; }
+
+.header__main { padding: 26px 0 22px; border-bottom: 1px solid #363c47; }
+
+.header__nav { overflow: hidden; padding-top: 10px; font-size: 0; text-align: right; }
+.header__nav a { display: inline-block; margin-left: 5.8%; font-size: 14px; color: white; }
+.header__nav a:first-child { margin-left: 0; }
+.header__nav a.is-active { color: #4f9fc5; }
+
+.footer { position: relative; z-index: 2; background: #323a44; color: white; }
+.footer .l-container { position: relative; padding-left: 240px; height: 390px; *zoom: 1; }
+.footer .l-container:after { content: " "; display: table; clear: both; }
+
+.footer__left { position: absolute; top: 0; bottom: 0; left: 0; padding-top: 48px; width: 240px; background: #4f9fc5; }
+.footer__left .soc { padding-left: 11px; }
+
+.footer__nav { margin-bottom: 34px; text-align: center; font-size: 14px; }
+.footer__nav li { margin-bottom: 8px; }
+.footer__nav a { color: white; }
+
+.footer__main { padding: 45px 0 0 11%; overflow: hidden; *zoom: 1; }
+.footer__main:after { content: " "; display: table; clear: both; }
+
+.footer__post-wrap { float: left; width: 47%; }
+
+.footer__title { margin-bottom: 29px; color: #e94a3e; font-size: 24px; font-weight: bold; text-transform: uppercase; }
+
+.footer__post { margin-bottom: 28px; color: white; font-size: 14px; }
+.footer__post a { color: #3d899e; }
+
+.footer__twitter-wrap { float: left; margin-left: 4%; width: 43%; }
+
+.twitter { *zoom: 1; }
+.twitter:after { content: " "; display: table; clear: both; }
+
+.twitter__img { float: left; margin-right: 13px; }
+
+.twitter__text { overflow: hidden; }
+.twitter__text a { color: #6db63a; }
+.twitter__text .twitter__tag { color: #3d899e; }
+
+.soc { font-size: 0; }
+.soc a { display: inline-block; margin-left: 13%; vertical-align: middle; }
+
+.soc__fb { background: url('../img/icons-s4028758b17.png') 0 -173px no-repeat; width: 36px; height: 36px; }
+
+.soc__tw { background: url('../img/icons-s4028758b17.png') 0 -127px no-repeat; width: 37px; height: 36px; }
+
+.soc__tm { background: url('../img/icons-s4028758b17.png') 0 -81px no-repeat; width: 36px; height: 36px; }
