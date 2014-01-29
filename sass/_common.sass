@@ -5,6 +5,9 @@ $green: #6db63a
 $violet_dark: #441a61
 $gray: #3b414e
 html
+	font-size: 62.5%
+	-ms-text-size-adjust: 100%
+	-webkit-text-size-adjust: 100%
 	+scrollbar
 		width: 14px
 	+scrollbar-track	
@@ -14,12 +17,14 @@ html
 	+scrollbar-track-piece 
 		background: #e1e1e1
 body
-	min-width: 480px
+	min-width: 320px
 	+font
 	color: #3b414e 
-	font-size: 14px
+	+fs(14)
 	font-weight: 400 
 	background: #fff
+	+r(w480)
+		font-size: 12px
 a
 	text-decoration: none
 .l-layout	 
@@ -40,29 +45,47 @@ a
 	+box
 	max-width: 1100px 
 
-
+.title
+	font-size: 24px
+	+font2
+	font-weight: bold
+	+r(w1024)  
+		font-size: 20px
+	+r(w768)  
+		font-size: 18px
+	+r(w640)  
+		font-size: 16px
 .header
 	background: #3B414E 
 	.l-container
 		position: relative
-		padding: 0 60px
+		padding: 0 3.2%
 		+clr
+		+r(w760)
+			padding: 0 5px 
 .header__top
-	padding: 12px 0 13px 
+	padding: 14px 0 11px 
 	background: #4f9fc5
-	font-size: 16px
+	+fs(16) 
 	color: #fff
 .header__title
 	text-align: center
+	+r(w900)
+		text-align: left
+		float: left
+	+r(w560)
+		display: none
 .header__links
 	position: absolute
 	top: 0
-	right: 60px
+	right: 3.2%
+	+r(w560)
+		position: static
 	a
 		color: #fff 
 	span
 		display: inline-block
-		margin: 0 13px 
+		margin: 0 17px 0 11px
 .header__logo
 	float: left
 	+s(logo)
@@ -71,29 +94,36 @@ a
 	border-bottom: 1px solid #363c47  
 .header__nav
 	overflow: hidden
-	padding-top: 10px
+	padding-top: 14px
 	font-size: 0
 	text-align: right
 	a
 		display: inline-block
-		margin-left: 5.8%
-		font-size: 14px
+		margin-left: 7.2%
+		+fs(14)
 		color: #fff 
 		&:first-child
 			margin-left: 0
 		&.is-active
 			color: $blue 
+		+r(w760)
+			margin-left: 4%
 			
 .footer
 	position: relative
 	z-index: 2
 	background: #323a44 
 	color: #fff 
-	.l-container
-		position: relative
-		padding-left: 240px
-		height: 390px
-		+clr
+.footer__in
+	position: relative
+	margin: 0 auto 
+	padding-left: 240px
+	min-height: 390px
+	max-width: 1190px
+	+box
+	+clr
+	+r(w760)
+		padding: 0
 .footer__left
 	position: absolute
 	top: 0
@@ -104,39 +134,79 @@ a
 	background: #4f9fc5 
 	.soc
 		padding-left: 11px 
+		+r(w760)
+			width: 100%
+			padding-left: 0
+			text-align: center
+	+r(w760)
+		position: static
+		padding: 10px 
+		width: 100%
+		+clr
+		+box
 .footer__nav
-	margin-bottom: 34px
+	margin-bottom: 41px
 	text-align: center
-	font-size: 14px
+	+fs(14)
+	+r(w760)
+		margin-bottom: 15px
 	li
 		margin-bottom: 8px 	
+		+r(w760)
+			display: inline-block
+			margin-left: 10px
 	a
 		color: #fff 
 .footer__main
-	padding: 45px 0 0 11%
+	padding: 42px 0 0 10.5%
 	overflow: hidden
 	+clr
+	+r(w760)
+		padding: 10px 5px
 .footer__post-wrap
 	float: left
-	width: 47%
+	width: 42%
+	+r(w760)
+		width: 50%
+		+box
+		padding-right: 2%
+	+r(w480) 
+		width: 100%
+		+box
 .footer__title
 	margin-bottom: 29px
 	color: #e94a3e
-	font-size: 24px
+	+fs(24)
 	font-weight: bold
 	text-transform: uppercase 
+	+r(w760)
+		font-size: 20px
 .footer__post
 	margin-bottom: 28px
 	color: #fff 
-	font-size: 14px
+	+fs(14)
+	line-height: 1.25
+	+r(w480)
+		+fs(12)
 	a
 		color: $blue_dark 
 .footer__twitter-wrap
 	float: left
-	margin-left: 4%
+	margin-left: 3%
 	width: 43%
+	+r(w760)
+		width: 50%
+		+box
+		margin-left: 0
+		padding-left: 2%
+	+r(w480)
+		padding: 5px 
+		width: 100%
+		+box
 .twitter
 	+clr
+	+r(w480)
+		font-size: 12px
 .twitter__img
 	float: left
 	margin-right: 13px
@@ -146,3 +216,13 @@ a
 		color: $green
 	.twitter__tag
 		color: $blue_dark 
+		
+.footer__copy
+	padding-top: 23px
+	clear: both
+	font-size: 10px
+	color: #596677
+	letter-spacing: 3px  
+	text-transform: uppercase
+	+r(w480)
+		letter-spacing: 0 
