@@ -6,6 +6,7 @@
 	font-weight: bold
 	+r(w640)
 		font-size: 14px
+// ----------------- FAQ ----------- //
 .faq-wrap
 	padding: 5% 0 7.3%
 	.title
@@ -60,4 +61,156 @@
 	width: 48%
 	+r(w360)
 		float: none
+		width: 100%
+		
+// ----------------- Features ----------- //
+.benefit
+	padding: 3.1% 0 2.1%
+	background: $light 
+	.l-container
+		+clr
+	+r(w640)
+		padding: 3.1% 5px 2.1% 
+.benefit__info
+	float: left
+	width: 49%
+	padding: 0 20px 0 7%
+	font-size: 16px
+	+box
+	+r(w640)
+		padding: 0
+		width: 100%
+.benefit__img
+	overflow: hidden
+	text-align: center
+	+r(w640)
+		display: none
+	img
+		max-width: 100%
+		height: auto
+		
+.advant-wrap
+	padding-top: 14px
+	background: #5387a0 
+.advant-row
+	padding-top: 15px
+	+clr
+	border-bottom: 1px solid #fff 
+	&:last-child
+		border-bottom: 0
+	+r(w640)
+		border-bottom: 0
+.advant
+	float: left
+	width: 16.5%
+	color: #fff
+	font-size: 14px 
+	text-align: center
+	+r(w760)
+		margin-bottom: 15px
+		width: 25%
+	+r(w640)
+		width: 33.3%
+	+r(w360)
+		width: 50%
+	&.is-active 
+		span
+			position: relative
+			&:after
+				content: ""
+				position: absolute
+				left: 0
+				right: 0
+				bottom: 0
+				height: 9px
+				background: #fff 
+				+r(w640)
+					height: 5px
+	&:first-child
+		width: 17.5%
+		+r(w640)
+			width: 33.3%
+		+r(w360)
+			width: 50%
+	span
+		display: block
+		margin: 0 auto 
+		height: 47px
+		max-width: 80%
+		
+	i
+		display: inline-block
+.advant__icon
+	height: 55px
+$advant: icon-phone, icon-bandwidth, icon-storage, icon-domain, icon-ssl, icon-integr, icon-cart, icon-ship, icon-acc, icon-sale, icon-stat, icon-more
+@each $i in $advant
+	.#{$i} 
+		+s($i)
+
+.video_simple
+	padding-bottom: 3.4%
+	background: $light 
+	color: $gray 
+	.l-container
+		max-width: 740px
+	.video__text
+		width: 98%
+	.video__frame
+		margin-bottom: 6.1%
+		
+.review
+	padding: 3.1% 0 0 
+	text-align: center
+	+r(w860)
+		overflow: hidden
+	.info-wrap,
+	.title
+		width: 83%
+		margin: 0 auto
+		+r(w860)
+			width: 100%
+	.title
+		margin-bottom: 2.5% 
+	.info-wrap
+		padding-top: 5.4%
+	img
+		max-width: 100%
+		height: auto
+	.info
+		margin-bottom: 5%
+		
+.try
+	padding: 28px 0
+	background: #3b414e
+	+r(w760)
+		padding: 10px 5px  
+	.l-container
+		max-width: 700px
+		+clr
+		+r(w740)
+			max-width: 100%
+.try__info
+	float: left
+	width: 48%
+	padding-right: 2%
+	color: #fff
+	font-size: 16px
+	+r(w760)
+		font-size: 14px
+	+r(w360)
+		width: 100%
+		float: none
+		margin-bottom: 10px
+	strong
+		+font2
+		font-size: 24px
+		+r(w760)
+			font-size: 18px
+.try__btn
+	float: right
+	width: 48%
+	+r(w360)
+		width: 100%
+		float: none
+	.btn
 		width: 100%
