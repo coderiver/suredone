@@ -34,7 +34,6 @@ html ::-webkit-scrollbar-track-piece { background: #e1e1e1; }
 html ::scrollbar-track-piece { background: #e1e1e1; }
 
 body { min-width: 320px; font-family: "Asap", Arial, sans-serif; color: #3b414e; font-size: 14px; font-size: 1.4rem; font-weight: 400; background: white; }
-@media only screen and (max-width: 480px) { body { font-size: 13px; font-size: 1.3rem; } }
 
 a { text-decoration: none; }
 
