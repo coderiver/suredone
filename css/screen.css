@@ -73,12 +73,18 @@ a { text-decoration: none; }
 @media only screen and (max-width: 480px) { .header__logo { background: url('../img/icons-se00b271c70.png') 0 0 no-repeat; width: 170px; height: 31px; } }
 
 .header__main { padding: 26px 0 22px; border-bottom: 1px solid #363c47; }
+@media only screen and (max-width: 640px) { .header__main { padding: 10px 0; } }
 
 .header__nav { overflow: hidden; padding-top: 14px; font-size: 0; text-align: right; }
+@media only screen and (max-width: 640px) { .header__nav { display: none; } }
 .header__nav a { display: inline-block; margin-left: 7.2%; font-size: 14px; font-size: 1.4rem; color: white; }
 .header__nav a:first-child { margin-left: 0; }
 .header__nav a.is-active { color: #4f9fc5; }
 @media only screen and (max-width: 760px) { .header__nav a { margin-left: 4%; } }
+
+.header__select { display: none; }
+@media only screen and (max-width: 640px) { .header__select { display: block; float: right; width: 155px; height: 30px; margin-top: 2px; background: #f0f0ef; font-family: "Asap", Arial, sans-serif; color: #3b414e; font-size: 16px; } }
+@media only screen and (max-width: 360px) { .header__select { width: 135px; } }
 
 .footer { position: relative; z-index: 2; background: #323a44; color: white; }
 

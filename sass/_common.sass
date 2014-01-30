@@ -94,11 +94,15 @@ a
 .header__main
 	padding: 26px 0 22px
 	border-bottom: 1px solid #363c47  
+	+r(w640)
+		padding: 10px 0 
 .header__nav
 	overflow: hidden
 	padding-top: 14px
 	font-size: 0
 	text-align: right
+	+r(w640)
+		display: none
 	a
 		display: inline-block
 		margin-left: 7.2%
@@ -110,7 +114,20 @@ a
 			color: $blue 
 		+r(w760)
 			margin-left: 4%
-			
+.header__select
+	display: none
+	+r(w640)
+		display: block
+		float: right
+		width: 155px
+		height: 30px
+		margin-top: 2px
+		background: $light 
+		+font
+		color: $gray
+		font-size: 16px  
+	+r(w360)
+		width: 135px
 .footer
 	position: relative
 	z-index: 2
