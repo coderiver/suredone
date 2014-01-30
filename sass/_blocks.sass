@@ -56,3 +56,51 @@
 	text-shadow: 1px 2px 0 #b24630
 	color: #fff 
 	+box-shadow(0 1px 0 rgba(233, 74, 62, 0.2))
+	
+.input-wrap
+	margin-bottom: 14px
+.input
+	display: block
+	padding: 0 11px 
+	width: 100%
+	height: 31px
+	border: 1px solid #d8d8d8
+	background: #fff
+	+box
+	+font
+	font-size: 12px
+	+tr(all .2s linear)
+	&:focus
+		border: 1px solid $blue_dark
+.textarea
+	padding: 11px 
+	resize: vertical
+.popup
+	position: absolute
+	top: 0
+	left: 50%
+	margin-left: -180px
+	max-width: 360px
+	background: $blue 
+	color: #fff 
+	.textarea
+		resize: none
+		height: 82px
+.popup_static
+	position: static
+	margin-left: 0
+.popup__main
+	border-bottom: 1px solid #51a8d1 
+	padding: 16px 40px 19px
+.popup__title	
+	margin-bottom: 16px
+	font-size: 22px
+	+font2
+	strong
+		display: block
+.popup__footer
+	padding: 20px 0
+	text-align: center
+	background: $gray  
+	.btn
+		width: 222px
