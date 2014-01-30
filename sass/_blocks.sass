@@ -86,9 +86,7 @@
 	.textarea
 		resize: none
 		height: 82px
-.popup_static
-	position: static
-	margin-left: 0
+
 .popup__main
 	border-bottom: 1px solid #51a8d1 
 	padding: 16px 40px 19px
@@ -104,3 +102,18 @@
 	background: $gray  
 	.btn
 		width: 222px
+		
+.soc-small
+	font-size: 0
+	a
+		display: inline-block
+		margin-left: 8px
+		vertical-align: middle
+		&:active
+			position: relative
+			top: 1px
+
+.soc-small__fb
+	+s(soc-fb2)
+.soc-small__tw
+	+s(soc-tw2)
