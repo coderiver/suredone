@@ -2,7 +2,7 @@ $red: #d75339
 $blue: #4f9fc5
 $blue_dark: #3d899e
 $green: #6db63a
-$violet_dark: #441a61
+$light: #f0f0ef
 $gray: #3b414e
 html
 	font-size: 62.5%
@@ -24,7 +24,7 @@ body
 	font-weight: 400 
 	background: #fff
 	+r(w480)
-		font-size: 12px
+		+fs(13)
 a
 	text-decoration: none
 .l-layout	 
@@ -89,6 +89,8 @@ a
 .header__logo
 	float: left
 	+s(logo)
+	+r(w480)
+		+s(logo-small)
 .header__main
 	padding: 26px 0 22px
 	border-bottom: 1px solid #363c47  

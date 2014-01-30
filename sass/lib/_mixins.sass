@@ -9,6 +9,7 @@ $w640: 640px
 $w560: 560px
 $w480: 480px
 $w360: 360px
+$w320: 320px
 
 =r($media)
 	@if $media == w1180
@@ -40,6 +41,9 @@ $w360: 360px
 			@content
 	@if $media == w360
 		@media only screen and (max-width: $w360)
+			@content
+	@if $media == w320
+		@media only screen and (max-width: $w320)
 			@content
 
 =fs($sizeValue: 16)
