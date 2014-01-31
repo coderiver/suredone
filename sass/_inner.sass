@@ -142,7 +142,7 @@
 		display: inline-block
 .advant__icon
 	height: 55px
-$advant: icon-phone, icon-bandwidth, icon-storage, icon-domain, icon-ssl, icon-integr, icon-cart, icon-ship, icon-acc, icon-sale, icon-stat, icon-more
+$advant: icon-phone, icon-bandwidth, icon-storage, icon-domain, icon-ssl, icon-integr, icon-cart, icon-car, icon-acc, icon-sale, icon-stat, icon-more
 @each $i in $advant
 	.#{$i} 
 		+s($i)
@@ -168,7 +168,7 @@ $advant: icon-phone, icon-bandwidth, icon-storage, icon-domain, icon-ssl, icon-i
 		width: 83%
 		margin: 0 auto
 		+r(w860)
-			width: 100%
+			width: 100%  
 	.title
 		margin-bottom: 2.5% 
 	.info-wrap
@@ -382,6 +382,7 @@ $advant: icon-phone, icon-bandwidth, icon-storage, icon-domain, icon-ssl, icon-i
 		+r(w860)  
 			padding: 0 5px 
 .info-section_white
+	padding: 8.3% 0 8.5% 
 	background: #fff 
 	.l-container
 		max-width: 75%
@@ -640,4 +641,111 @@ $service: icon-start,icon-ebay,icon-amazon,icon-google,icon-pay,icon-ship,icon-c
 		+r(w800)
 			font-size: 14px
 
-
+.post-wrap
+	font-size: 0
+	padding-left: 38px
+	margin-right: -5%
+	+r(w1024)	
+		padding-left: 10px
+	+r(w360)
+		margin-right: 0
+		padding: 0 5px 
+.post
+	display: inline-block
+	margin: 0 2.4% 2.4% 0
+	height: 400px
+	vertical-align: top
+	font-size: 14px
+	background: $light
+	+r(w1024)
+		.post__main
+			padding: 20px !important
+	+r(w900)
+		height: auto
+		img
+			max-width: 100%
+			height: auto
+		.post__img
+			height: auto
+	+r(w860)
+		width: 45% !important
+	+r(w760)
+		.post__main
+			padding: 10px !important
+	+r(w360)
+		width: 100% !important
+	a
+		color: $gray 
+.post_large
+	width: 90.5%
+	background: $gray 
+	color: #fff
+	+clr
+	+r(w860)
+		width: 92.3% !important
+		padding-bottom: 10px
+	
+	a
+		color: #fff 
+	.post__main
+		float: left
+		width: 230px
+		text-align: right
+		padding: 44px 20px 10px 40px
+		+r(w860)
+			float: none
+			width: 100%
+			+box
+			padding: 10px !important
+		span
+			color: $blue 
+	.post__excerpt
+		overflow: hidden
+		padding: 50px 40px 0 0
+		+r(w1024)
+			padding: 10px
+.post_big
+	width: 52.6%
+	.post__main
+		padding: 44px 50px 10px
+.post_m
+	width: 35.5%
+	.post__main
+		padding: 44px 32px 10px
+.post_s
+	width: 28.3%
+	.post__main
+		padding: 44px 28px 10px
+	.post__title
+		font-size: 18px
+.post__img
+	display: block
+	position: relative
+	height: 200px
+	overflow: hidden
+	&:hover
+		span
+			+opacity(.4)
+	img
+		display: block 
+		margin: 0 auto 
+		// max-width: 100%
+		// height: auto
+	span
+		position: absolute
+		bottom: 0
+		right: 0
+		padding: 13px 21px 12px 24px 
+		background: $blue 
+		+tr(opacity .2s linear)
+.post__title
+	margin-bottom: 2px
+	font-weight: bold
+	font-size: 24px
+	max-height: 90px
+	overflow: hidden
+	+font2
+	+r(w900)
+		font-size: 18px !important
+	+r(w760)
+		font-size: 14px !important
