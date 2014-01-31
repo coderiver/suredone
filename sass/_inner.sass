@@ -381,13 +381,18 @@ $advant: icon-phone, icon-bandwidth, icon-storage, icon-domain, icon-ssl, icon-i
 			max-width: 100%  
 		+r(w860)  
 			padding: 0 5px 
-			
+.info-section_white
+	background: #fff 
+	.l-container
+		max-width: 75%
 .service-wrap
 	padding-top: 2%
 .search
 	position: relative
 	margin-bottom: 9.4%  
 	+clr
+	+r(w640)
+		padding: 0 5px 
 .search__btn
 	float: right
 	.btn
@@ -395,11 +400,16 @@ $advant: icon-phone, icon-bandwidth, icon-storage, icon-domain, icon-ssl, icon-i
 		width: 140px
 		&:first-child
 			margin-left: 0
+	+r(w640)
+		float: none
 .search__input
 	position: absolute
 	left: 0
 	right: 320px
 	top: 0
+	+r(w640)
+		position: static
+		margin-bottom: 20px
 	input
 		display: block
 		padding: 0 20px 
@@ -413,14 +423,22 @@ $advant: icon-phone, icon-bandwidth, icon-storage, icon-domain, icon-ssl, icon-i
 		color: $gray
 .service-items
 	font-size: 0
+	+r(w480)
+		padding: 0 5px 
 .service
 	display: inline-block
 	margin-bottom: 6%
-	padding-right: 3%
-	width: 30.3%
+	padding-right: 1%
+	width: 33.3%
+	+box 
 	font-size: 16px
 	+clr
-.service__icon
+	+r(w860)
+		width: 50%
+	+r(w480)
+		width: 100%
+		font-size: 14px
+.service__icon 
 	float: left
 	margin-right: 15px
 .service__main  
@@ -429,6 +447,8 @@ $advant: icon-phone, icon-bandwidth, icon-storage, icon-domain, icon-ssl, icon-i
 	color: #666
 	line-height: 2
 	letter-spacing: 0.5px 
+	+r(w860)
+		letter-spacing: 0 
 	a
 		color: $blue
 		text-decoration: underline
@@ -441,3 +461,183 @@ $service: icon-start,icon-ebay,icon-amazon,icon-google,icon-pay,icon-ship,icon-c
 @each $i in $service
 	.#{$i} 
 		+s($i)
+
+.overlay
+	position: fixed
+	top: 0
+	right: 0
+	bottom: 0
+	left: 0
+	z-index: 10000
+	background: #000
+	+opacity(.7) 
+
+.window-wrap
+	position: fixed
+	top: 0
+	right: 0
+	bottom: 0
+	left: 0
+	z-index: 20000
+	overflow-y: auto
+	overflow-x: hidden
+.window
+	margin: 20px auto
+	padding: 54px 63px 
+	width: 252px
+	background: #4f9fc5 
+	color: #fff 
+	+r(w480)
+		+box
+		margin: 0
+		padding: 10px 
+		width: 100%
+	.textarea
+		height: 231px
+		resize: none
+.window__title
+	margin-bottom: 14px
+	font-size: 24px
+	+font2
+	font-weight: bold
+.window__info
+	margin-bottom: 25px
+	
+.article
+	padding: 6.3% 0 6.3% 18.2%
+	color: #666 
+	line-height: 1.5
+	+r(w1180)
+		padding: 6.3% 20px 6.3% 20px
+	+r(w640)
+		padding: 20px 5px
+	h2
+		margin-bottom: 12px
+		+font2
+		font-size: 24px
+		+r(w640)
+			font-size: 18px
+		+r(w480)
+			font-size: 16px
+	img, iframe
+		display: block
+		
+	iframe
+		margin: 5% 0 4%  
+		max-width: 100%
+	img
+		margin: 6% 0  
+		max-width: 100%
+		height: auto
+		+box-shadow(0 0 38px rgba(0,0,0,.2))
+		+r(w640)
+			+box-shadow(none)
+	span
+		color: $red 
+	blockquote
+		position: relative
+		margin: 29px 0 
+		color: $red 
+		+r(w1180)
+			padding-left: 65px
+		&:before
+			content: ""
+			position: absolute
+			left: -71px
+			top: -7px
+			+s(important) 
+			+r(w1180)
+				left: 0
+				top: 0
+.article__title
+	position: relative
+	margin-bottom: 7px
+	font-size: 24px
+	font-weight: bold
+	+font2
+	color: $blue
+	+r(w1180)
+		margin-bottom: 15px
+	+r(w640)
+		font-size: 18px
+	+r(w480)
+		font-size: 16px
+	i
+		position: absolute
+		left: -73px
+		top: -10px
+		+r(w1180)
+			position: static
+			margin-top: -5px
+			display: inline-block
+			vertical-align: middle
+			margin-right: 14px
+		+r(w480)
+			display: none
+			
+.post-cont
+	padding: 9% 4.5% 4%
+	img
+		margin-bottom: 16px
+		max-width: 100%
+		height: auto
+	p
+		margin-bottom: 18px
+.post-cont__meta
+	float: left
+	margin: 0 5.5% 23px 0
+	padding-bottom: 20px
+	width: 221px
+	border-bottom: 2px solid #58a4c8 
+	+r(w860)
+		float: none
+		margin: 10px 0 
+		width: 100%
+	.soc-share
+		margin: 20px 0 0 10px
+.post-cont__title
+	margin-bottom: 6px
+	font-size: 24px
+	color: $blue
+	+font2
+	font-weight: bold 
+	+r(w480)
+		font-size: 16px
+.post-nav
+	margin: 7% 0 8.7%
+	padding-top: 5.2%
+	border-top: 2px solid #58a4c8 
+	+clr
+	a
+		color: $blue
+	.post-nav__item
+		color: $gray 
+.post-nav__prev,
+.post-nav__next
+	float: left
+	width: 240px
+	text-align: center
+	+r(w800)
+		width: 50%
+		padding: 10px
+		+box 
+	+r(w360)
+		width: 100%
+		margin-bottom: 10px
+.post-nav__next
+	float: right
+.post-nav__item
+	display: block
+	margin-top: 10px
+	padding: 41px 28px 
+	background: $light 
+	text-align: left
+	strong
+		display: block
+		margin-bottom: 7px
+		font-size: 18px
+		+font2
+		+r(w800)
+			font-size: 14px
+
+
