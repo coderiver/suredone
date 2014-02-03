@@ -464,6 +464,7 @@ $service: icon-start,icon-ebay,icon-amazon,icon-google,icon-pay,icon-ship,icon-c
 		+s($i)
 
 .overlay
+	display: none
 	position: fixed
 	top: 0
 	right: 0
@@ -474,6 +475,7 @@ $service: icon-start,icon-ebay,icon-amazon,icon-google,icon-pay,icon-ship,icon-c
 	+opacity(.7) 
 
 .window-wrap
+	display: none
 	position: fixed
 	top: 0
 	right: 0
@@ -483,6 +485,7 @@ $service: icon-start,icon-ebay,icon-amazon,icon-google,icon-pay,icon-ship,icon-c
 	overflow-y: auto
 	overflow-x: hidden
 .window
+	position: relative
 	margin: 20px auto
 	padding: 54px 63px 
 	width: 252px
@@ -496,6 +499,13 @@ $service: icon-start,icon-ebay,icon-amazon,icon-google,icon-pay,icon-ship,icon-c
 	.textarea
 		height: 231px
 		resize: none
+.window__close
+	position: absolute
+	top: 0
+	right: -17px
+	+s(close2) 
+	&:active
+		margin-top: 1px
 .window__title
 	margin-bottom: 14px
 	font-size: 24px
