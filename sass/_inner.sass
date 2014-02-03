@@ -139,7 +139,7 @@
 		max-width: 80%
 		
 	i
-		display: inline-block
+		+inline-block
 .advant__icon
 	height: 55px
 $advant: icon-phone, icon-bandwidth, icon-storage, icon-domain, icon-ssl, icon-integr, icon-cart, icon-car, icon-acc, icon-sale, icon-stat, icon-more
@@ -229,6 +229,7 @@ $advant: icon-phone, icon-bandwidth, icon-storage, icon-domain, icon-ssl, icon-i
 			+gray-zero
 	.l-container
 		position: relative
+		z-index: 2
 		padding: 0 3.2% 
 		+r(w860)
 			padding: 0
@@ -320,7 +321,7 @@ $advant: icon-phone, icon-bandwidth, icon-storage, icon-domain, icon-ssl, icon-i
 	+r(w360)
 		margin-right: 0
 .worker
-	display: inline-block
+	+inline-block
 	vertical-align: top
 	margin: 0 11% 7.5% 0
 	width: 21.5%
@@ -427,7 +428,7 @@ $advant: icon-phone, icon-bandwidth, icon-storage, icon-domain, icon-ssl, icon-i
 	+r(w480)
 		padding: 0 5px 
 .service
-	display: inline-block
+	+inline-block
 	margin-bottom: 6%
 	padding-right: 1%
 	width: 33.3%
@@ -580,7 +581,7 @@ $service: icon-start,icon-ebay,icon-amazon,icon-google,icon-pay,icon-ship,icon-c
 		+r(w1180)
 			position: static
 			margin-top: -5px
-			display: inline-block
+			+inline-block
 			vertical-align: middle
 			margin-right: 14px
 		+r(w480)
@@ -661,7 +662,7 @@ $service: icon-start,icon-ebay,icon-amazon,icon-google,icon-pay,icon-ship,icon-c
 		margin-right: 0
 		padding: 0 5px 
 .post
-	display: inline-block
+	+inline-block  
 	margin: 0 2.4% 2.4% 0
 	height: 400px
 	vertical-align: top
@@ -759,3 +760,8 @@ $service: icon-start,icon-ebay,icon-amazon,icon-google,icon-pay,icon-ship,icon-c
 		font-size: 18px !important
 	+r(w760)
 		font-size: 14px !important
+
+
+// *+ html
+// 	.post
+// 		display: inline
