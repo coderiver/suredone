@@ -191,6 +191,17 @@ $advant: icon-phone, icon-bandwidth, icon-storage, icon-domain, icon-ssl, icon-i
 		+clr
 		+r(w740)
 			max-width: 100%
+	&.is-fixed
+		.try__in
+			position: fixed
+			top: 43px
+			left: 0
+			right: 0
+			z-index: 1000 		
+			.try__info
+				font-size: 18px
+				+r(w760)
+					font-size: 14px
 .try__info
 	float: left
 	width: 48%
@@ -216,7 +227,38 @@ $advant: icon-phone, icon-bandwidth, icon-storage, icon-domain, icon-ssl, icon-i
 		float: none
 	.btn
 		width: 100%
-		
+.try_main
+	padding: 0
+	background: none
+	.try__in
+		padding: 12px 0 
+		background: #fff 
+	.try__info	
+		float: none
+		padding-top: 5px
+		text-align: center
+		width: auto
+		overflow: hidden
+		font-size: 22px
+		color: $gray 
+		strong
+			+font
+		+r(w760)
+			font-size: 14px
+	.try__btn
+		float: right
+		width: 222px
+		+r(w760)
+			width: 160px
+			.btn
+				font-size: 14px
+	.l-container
+		padding: 0 6% 
+		max-width: 1180px
+		+clr
+		+r(w760)
+			max-width: 100%
+			padding: 0 5px 
 
 // ----------  Contacts --------- //
 .map

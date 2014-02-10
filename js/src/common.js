@@ -18,5 +18,30 @@ $(document).ready(function() {
         $("body").removeClass("is-window-open");
     });
 
+    function sticky() {
+        var header = $(".js-sticky-header");
+        var try_el = $(".js-sticky-try");
+        if ($(window).scrollTop() > header.offset().top) {
+            header.addClass("is-fixed");
+        }
+        if (try_el.length > 0){
+            var pos = $(window).scrollTop() + header.outerHeight();
+            if ( pos >= try_el.offset().top) {
+                try_el.addClass("is-fixed");
+            }
+            else {
+                try_el.removeClass("is-fixed");
+            }
+        }
+        if ($(window).scrollTop() == 0){
+            header.removeClass("is-fixed");
+            try_el.removeClass("is-fixed");
+        }
+    }
+    sticky();
+    $(window).scroll(function(){
+        sticky();
+    });
+
 });
 
