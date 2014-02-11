@@ -25,6 +25,28 @@ body
 	background: #fff
 	&.is-window-open
 		overflow: hidden
+	&.is-no-sidebar
+		.l-cols
+			padding-left: 0
+			+r(min1180)
+				padding-left: 240px 
+			.sidebar
+				left: -2000px
+			.sidebar-show
+				left: 0
+	&.has-sidebar
+		+r(w640)
+			overflow: hidden
+			.l-cols
+				.sidebar
+					position: fixed
+					top: 0
+					left: 0
+					bottom: 0
+					z-index: 2000
+					+box-shadow(0 0 10px rgba(0,0,0,.3))
+				.sidebar-show
+					left: -2000px
 a
 	text-decoration: none
 .l-layout	 
@@ -183,7 +205,7 @@ a
 		margin-top: 2px
 	+r(w360)
 		width: 135px
-		
+		  
 .footer
 	position: relative
 	z-index: 2
@@ -197,6 +219,16 @@ a
 	max-width: 1180px
 	+box
 	+clr
+	&:before
+		content: ""
+		position: absolute
+		top: 0  
+		bottom: 0
+		left: -2000px
+		width: 2000px
+		background: $blue  
+		+r(w1180)
+			display: none
 	+r(w760)
 		padding: 0
 .footer__left

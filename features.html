@@ -8,7 +8,9 @@
 	<link href='http://fonts.googleapis.com/css?family=Asap:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" media="screen" href="css/screen.css" >
-	<script src="js/scripts.min.js"></script>
+	
+	<script src="js/scripts.js"></script>
+	
 </head>
 <body>
 
@@ -61,7 +63,15 @@
 	</div>
 	<div class="advant-wrap">	
 		<div class="l-container">
-			<div class="advant-row">
+			<div class="cycle-slideshow" 
+			    data-cycle-fx="carousel"
+			    data-cycle-timeout="0"
+			    data-cycle-carousel-visible="6"
+			    data-cycle-slides="> a"
+			    data-cycle-swipe=true
+			    data-cycle-prev=".js-advant-prev"
+			    data-cycle-next=".js-advant-next"
+			>
 				<a href="#" class="advant">
 					<div class="advant__icon">
 						<i class="icon-phone"></i>
@@ -98,8 +108,6 @@
 					</div>
 					<span>Amazon / eBay Integration</span>
 				</a>
-			</div>
-			<div class="advant-row">
 				<a href="#" class="advant">
 					<div class="advant__icon">
 						<i class="icon-cart"></i>
@@ -137,6 +145,8 @@
 					<span>...and much more!</span>
 				</a>
 			</div>
+			<button class="advant-nav__prev js-advant-prev"></button>
+			<button class="advant-nav__next js-advant-next"></button>
 		</div>
 	</div>
 	<div class="video video_simple">

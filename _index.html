@@ -8,7 +8,7 @@
 	<link href='http://fonts.googleapis.com/css?family=Asap:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" media="screen" href="css/screen.css" >
-	<script src="js/scripts.min.js"></script>
+	<script src="js/scripts.js"></script>
 </head>
 <body>
 
@@ -157,9 +157,11 @@
 				<p>Check out what some of our users have achieved and what they have to say about us.</p>
 			</div>
 			<div class="cycle-slideshow" 
-			    data-cycle-fx="fade"
+			    data-cycle-fx="carousel"
 			    data-cycle-timeout="0"
-			    data-cycle-slides="> div"
+			    data-cycle-speed="200"
+			    data-cycle-carousel-visible="1"
+			    data-cycle-slides=".quote-wrap__slide"
 			    data-cycle-swipe=true
 			    data-cycle-auto-height=container
 			    data-cycle-pager=".js-pager"
@@ -167,169 +169,241 @@
 			    data-cycle-pager-active-class="is-active"
 			>
 				<div class="quote-wrap__slide">
-					<div class="quote-wrap_hz">
-						<div class="quote-item">
-							<div class="quote-item__img">
-								<img src="img/logo1.png" alt="" width="92" height="104">
-							</div>
-							<div class="quote-item__left">
-								<blockquote class="quote-item__main">
-									“With SureDone, we have had increased traffic and greater SEO results. We have recommended SureDone to many start-ups like us and will continue to work with them for many years to come.”
-								</blockquote>
-								<div class="quote-item__author">
-									- Sandra & Kata of <a href="#">A8 New York</a>
-								</div>
+					<div class="quote-item">
+						<div class="quote-item__img">
+							<img src="img/logo1.png" alt="" width="92" height="104">
+						</div>
+						<div class="quote-item__left">
+							<blockquote class="quote-item__main">
+								“With SureDone, we have had increased traffic and greater SEO results. We have recommended SureDone to many start-ups like us and will continue to work with them for many years to come.”
+							</blockquote>
+							<div class="quote-item__author">
+								- Sandra & Kata of <a href="#">A8 New York</a>
 							</div>
 						</div>
-						<div class="quote-item">
-							<div class="quote-item__img">
-								<img src="img/logo2.png" alt="" width="176" height="58">
-							</div>
-							<div class="quote-item__left">
-								<blockquote class="quote-item__main">
-									“With SureDone, we have had increased traffic and greater SEO results. We have recommended SureDone to many start-ups like us and will continue to work with them for many years to come.”
-								</blockquote>
-								<div class="quote-item__author">
-									- Sandra & Kata of <a href="#">A8 New York</a>
-								</div>
+					</div>
+					<div class="quote-item">
+						<div class="quote-item__img">
+							<img src="img/logo2.png" alt="" width="176" height="58">
+						</div>
+						<div class="quote-item__left">
+							<blockquote class="quote-item__main">
+								“With SureDone, we have had increased traffic and greater SEO results. We have recommended SureDone to many start-ups like us and will continue to work with them for many years to come.”
+							</blockquote>
+							<div class="quote-item__author">
+								- Sandra & Kata of <a href="#">A8 New York</a>
 							</div>
 						</div>
-						<div class="quote-item">
-							<div class="quote-item__img">
-								<img src="img/logo3.png" alt="" width="173" height="77">
-							</div>
-							<div class="quote-item__left">
-								<blockquote class="quote-item__main">
-									“With SureDone, we have had increased traffic and greater SEO results. We have recommended SureDone to many start-ups like us and will continue to work with them for many years to come.”
-								</blockquote>
-								<div class="quote-item__author">
-									- Sandra & Kata of <a href="#">A8 New York</a>
-								</div>
+					</div>
+					<div class="quote-item">
+						<div class="quote-item__img">
+							<img src="img/logo3.png" alt="" width="173" height="77">
+						</div>
+						<div class="quote-item__left">
+							<blockquote class="quote-item__main">
+								“With SureDone, we have had increased traffic and greater SEO results. We have recommended SureDone to many start-ups like us and will continue to work with them for many years to come.”
+							</blockquote>
+							<div class="quote-item__author">
+								- Sandra & Kata of <a href="#">A8 New York</a>
 							</div>
 						</div>
-						<div class="quote-item">
-							<div class="quote-item__img">
-								<img src="img/logo1.png" alt="" width="92" height="104">
-							</div>
-							<div class="quote-item__left">
-								<blockquote class="quote-item__main">
-									“With SureDone, we have had increased traffic and greater SEO results. We have recommended SureDone to many start-ups like us and will continue to work with them for many years to come.”
-								</blockquote>
-								<div class="quote-item__author">
-									- Sandra & Kata of <a href="#">A8 New York</a>
-								</div>
+					</div>
+					<div class="quote-item">
+						<div class="quote-item__img">
+							<img src="img/logo1.png" alt="" width="92" height="104">
+						</div>
+						<div class="quote-item__left">
+							<blockquote class="quote-item__main">
+								“With SureDone, we have had increased traffic and greater SEO results. We have recommended SureDone to many start-ups like us and will continue to work with them for many years to come.”
+							</blockquote>
+							<div class="quote-item__author">
+								- Sandra & Kata of <a href="#">A8 New York</a>
 							</div>
 						</div>
-						<div class="quote-item">
-							<div class="quote-item__img">
-								<img src="img/logo2.png" alt="" width="176" height="58">
-							</div>
-							<div class="quote-item__left">
-								<blockquote class="quote-item__main">
-									“With SureDone, we have had increased traffic and greater SEO results. We have recommended SureDone to many start-ups like us and will continue to work with them for many years to come.”
-								</blockquote>
-								<div class="quote-item__author">
-									- Sandra & Kata of <a href="#">A8 New York</a>
-								</div>
+					</div>
+					<div class="quote-item">
+						<div class="quote-item__img">
+							<img src="img/logo2.png" alt="" width="176" height="58">
+						</div>
+						<div class="quote-item__left">
+							<blockquote class="quote-item__main">
+								“With SureDone, we have had increased traffic and greater SEO results. We have recommended SureDone to many start-ups like us and will continue to work with them for many years to come.”
+							</blockquote>
+							<div class="quote-item__author">
+								- Sandra & Kata of <a href="#">A8 New York</a>
 							</div>
 						</div>
-						<div class="quote-item">
-							<div class="quote-item__img">
-								<img src="img/logo3.png" alt="" width="173" height="77">
-							</div>
-							<div class="quote-item__left">
-								<blockquote class="quote-item__main">
-									“With SureDone, we have had increased traffic and greater SEO results. We have recommended SureDone to many start-ups like us and will continue to work with them for many years to come.”
-								</blockquote>
-								<div class="quote-item__author">
-									- Sandra & Kata of <a href="#">A8 New York</a>
-								</div>
+					</div>
+					<div class="quote-item">
+						<div class="quote-item__img">
+							<img src="img/logo3.png" alt="" width="173" height="77">
+						</div>
+						<div class="quote-item__left">
+							<blockquote class="quote-item__main">
+								“With SureDone, we have had increased traffic and greater SEO results. We have recommended SureDone to many start-ups like us and will continue to work with them for many years to come.”
+							</blockquote>
+							<div class="quote-item__author">
+								- Sandra & Kata of <a href="#">A8 New York</a>
 							</div>
 						</div>
 					</div>
 				</div>
 				<div class="quote-wrap__slide">
-					<div class="quote-wrap_hz">
-						<div class="quote-item">
-							<div class="quote-item__img">
-								<img src="img/logo1.png" alt="" width="92" height="104">
-							</div>
-							<div class="quote-item__left">
-								<blockquote class="quote-item__main">
-									“With SureDone, we have had increased traffic and greater SEO results. We have recommended SureDone to many start-ups like us and will continue to work with them for many years to come.”
-								</blockquote>
-								<div class="quote-item__author">
-									- Sandra & Kata of <a href="#">A8 New York</a>
-								</div>
+					<div class="quote-item">
+						<div class="quote-item__img">
+							<img src="img/logo1.png" alt="" width="92" height="104">
+						</div>
+						<div class="quote-item__left">
+							<blockquote class="quote-item__main">
+								“With SureDone, we have had increased traffic and greater SEO results. We have recommended SureDone to many start-ups like us and will continue to work with them for many years to come.”
+							</blockquote>
+							<div class="quote-item__author">
+								- Sandra & Kata of <a href="#">A8 New York</a>
 							</div>
 						</div>
-						<div class="quote-item">
-							<div class="quote-item__img">
-								<img src="img/logo2.png" alt="" width="176" height="58">
-							</div>
-							<div class="quote-item__left">
-								<blockquote class="quote-item__main">
-									“With SureDone, we have had increased traffic and greater SEO results. We have recommended SureDone to many start-ups like us and will continue to work with them for many years to come.”
-								</blockquote>
-								<div class="quote-item__author">
-									- Sandra & Kata of <a href="#">A8 New York</a>
-								</div>
+					</div>
+					<div class="quote-item">
+						<div class="quote-item__img">
+							<img src="img/logo2.png" alt="" width="176" height="58">
+						</div>
+						<div class="quote-item__left">
+							<blockquote class="quote-item__main">
+								“With SureDone, we have had increased traffic and greater SEO results. We have recommended SureDone to many start-ups like us and will continue to work with them for many years to come.”
+							</blockquote>
+							<div class="quote-item__author">
+								- Sandra & Kata of <a href="#">A8 New York</a>
 							</div>
 						</div>
-						<div class="quote-item">
-							<div class="quote-item__img">
-								<img src="img/logo3.png" alt="" width="173" height="77">
+					</div>
+					<div class="quote-item">
+						<div class="quote-item__img">
+							<img src="img/logo3.png" alt="" width="173" height="77">
+						</div>
+						<div class="quote-item__left">
+							<blockquote class="quote-item__main">
+								“With SureDone, we have had increased traffic and greater SEO results. We have recommended SureDone to many start-ups like us and will continue to work with them for many years to come.”
+							</blockquote>
+							<div class="quote-item__author">
+								- Sandra & Kata of <a href="#">A8 New York</a>
 							</div>
-							<div class="quote-item__left">
-								<blockquote class="quote-item__main">
-									“With SureDone, we have had increased traffic and greater SEO results. We have recommended SureDone to many start-ups like us and will continue to work with them for many years to come.”
-								</blockquote>
-								<div class="quote-item__author">
-									- Sandra & Kata of <a href="#">A8 New York</a>
-								</div>
+						</div>
+					</div>
+					<div class="quote-item">
+						<div class="quote-item__img">
+							<img src="img/logo1.png" alt="" width="92" height="104">
+						</div>
+						<div class="quote-item__left">
+							<blockquote class="quote-item__main">
+								“With SureDone, we have had increased traffic and greater SEO results. We have recommended SureDone to many start-ups like us and will continue to work with them for many years to come.”
+							</blockquote>
+							<div class="quote-item__author">
+								- Sandra & Kata of <a href="#">A8 New York</a>
+							</div>
+						</div>
+					</div>
+					<div class="quote-item">
+						<div class="quote-item__img">
+							<img src="img/logo2.png" alt="" width="176" height="58">
+						</div>
+						<div class="quote-item__left">
+							<blockquote class="quote-item__main">
+								“With SureDone, we have had increased traffic and greater SEO results. We have recommended SureDone to many start-ups like us and will continue to work with them for many years to come.”
+							</blockquote>
+							<div class="quote-item__author">
+								- Sandra & Kata of <a href="#">A8 New York</a>
+							</div>
+						</div>
+					</div>
+					<div class="quote-item">
+						<div class="quote-item__img">
+							<img src="img/logo3.png" alt="" width="173" height="77">
+						</div>
+						<div class="quote-item__left">
+							<blockquote class="quote-item__main">
+								“With SureDone, we have had increased traffic and greater SEO results. We have recommended SureDone to many start-ups like us and will continue to work with them for many years to come.”
+							</blockquote>
+							<div class="quote-item__author">
+								- Sandra & Kata of <a href="#">A8 New York</a>
 							</div>
 						</div>
 					</div>
 				</div>
 				<div class="quote-wrap__slide">
-					<div class="quote-wrap_hz">
-						<div class="quote-item">
-							<div class="quote-item__img">
-								<img src="img/logo1.png" alt="" width="92" height="104">
-							</div>
-							<div class="quote-item__left">
-								<blockquote class="quote-item__main">
-									“With SureDone, we have had increased traffic and greater SEO results. We have recommended SureDone to many start-ups like us and will continue to work with them for many years to come.”
-								</blockquote>
-								<div class="quote-item__author">
-									- Sandra & Kata of <a href="#">A8 New York</a>
-								</div>
+					<div class="quote-item">
+						<div class="quote-item__img">
+							<img src="img/logo1.png" alt="" width="92" height="104">
+						</div>
+						<div class="quote-item__left">
+							<blockquote class="quote-item__main">
+								“With SureDone, we have had increased traffic and greater SEO results. We have recommended SureDone to many start-ups like us and will continue to work with them for many years to come.”
+							</blockquote>
+							<div class="quote-item__author">
+								- Sandra & Kata of <a href="#">A8 New York</a>
 							</div>
 						</div>
-						<div class="quote-item">
-							<div class="quote-item__img">
-								<img src="img/logo2.png" alt="" width="176" height="58">
-							</div>
-							<div class="quote-item__left">
-								<blockquote class="quote-item__main">
-									“With SureDone, we have had increased traffic and greater SEO results. We have recommended SureDone to many start-ups like us and will continue to work with them for many years to come.”
-								</blockquote>
-								<div class="quote-item__author">
-									- Sandra & Kata of <a href="#">A8 New York</a>
-								</div>
+					</div>
+					<div class="quote-item">
+						<div class="quote-item__img">
+							<img src="img/logo2.png" alt="" width="176" height="58">
+						</div>
+						<div class="quote-item__left">
+							<blockquote class="quote-item__main">
+								“With SureDone, we have had increased traffic and greater SEO results. We have recommended SureDone to many start-ups like us and will continue to work with them for many years to come.”
+							</blockquote>
+							<div class="quote-item__author">
+								- Sandra & Kata of <a href="#">A8 New York</a>
 							</div>
 						</div>
-						<div class="quote-item">
-							<div class="quote-item__img">
-								<img src="img/logo3.png" alt="" width="173" height="77">
+					</div>
+					<div class="quote-item">
+						<div class="quote-item__img">
+							<img src="img/logo3.png" alt="" width="173" height="77">
+						</div>
+						<div class="quote-item__left">
+							<blockquote class="quote-item__main">
+								“With SureDone, we have had increased traffic and greater SEO results. We have recommended SureDone to many start-ups like us and will continue to work with them for many years to come.”
+							</blockquote>
+							<div class="quote-item__author">
+								- Sandra & Kata of <a href="#">A8 New York</a>
 							</div>
-							<div class="quote-item__left">
-								<blockquote class="quote-item__main">
-									“With SureDone, we have had increased traffic and greater SEO results. We have recommended SureDone to many start-ups like us and will continue to work with them for many years to come.”
-								</blockquote>
-								<div class="quote-item__author">
-									- Sandra & Kata of <a href="#">A8 New York</a>
-								</div>
+						</div>
+					</div>
+					<div class="quote-item">
+						<div class="quote-item__img">
+							<img src="img/logo1.png" alt="" width="92" height="104">
+						</div>
+						<div class="quote-item__left">
+							<blockquote class="quote-item__main">
+								“With SureDone, we have had increased traffic and greater SEO results. We have recommended SureDone to many start-ups like us and will continue to work with them for many years to come.”
+							</blockquote>
+							<div class="quote-item__author">
+								- Sandra & Kata of <a href="#">A8 New York</a>
+							</div>
+						</div>
+					</div>
+					<div class="quote-item">
+						<div class="quote-item__img">
+							<img src="img/logo2.png" alt="" width="176" height="58">
+						</div>
+						<div class="quote-item__left">
+							<blockquote class="quote-item__main">
+								“With SureDone, we have had increased traffic and greater SEO results. We have recommended SureDone to many start-ups like us and will continue to work with them for many years to come.”
+							</blockquote>
+							<div class="quote-item__author">
+								- Sandra & Kata of <a href="#">A8 New York</a>
+							</div>
+						</div>
+					</div>
+					<div class="quote-item">
+						<div class="quote-item__img">
+							<img src="img/logo3.png" alt="" width="173" height="77">
+						</div>
+						<div class="quote-item__left">
+							<blockquote class="quote-item__main">
+								“With SureDone, we have had increased traffic and greater SEO results. We have recommended SureDone to many start-ups like us and will continue to work with them for many years to come.”
+							</blockquote>
+							<div class="quote-item__author">
+								- Sandra & Kata of <a href="#">A8 New York</a>
 							</div>
 						</div>
 					</div>

@@ -8,9 +8,9 @@
 	<link href='http://fonts.googleapis.com/css?family=Asap:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" media="screen" href="css/screen.css" >
-	<script src="js/scripts.min.js"></script>
+	<script src="js/scripts.js"></script>
 </head>
-<body class="is-window-open">
+<body>
 <!-- BEGIN  out-->
 <div class="l-layout">
 	<header class="header js-sticky-header">
@@ -61,7 +61,7 @@
 				</div>
 				<div class="search__btn">
 					<input type="submit" class="btn btn_red" value="SEARCH">
-					<button class="btn btn_blue">SUPPORT</button>
+					<button class="btn btn_blue js-popup-key" data-popup="js-popup-support">SUPPORT</button>
 				</div>
 			</div>
 			<div class="service-items">
@@ -220,8 +220,8 @@
 		</div> 
 	</div>
 </footer>
-<div class="overlay js-overlay" style="display:block"></div>
-<div class="window-wrap js-window-wrap" style="display:block">
+<div class="overlay js-overlay"></div>
+<div class="window-wrap window-wrap_support js-window-wrap js-popup-support">
 	<div class="window">
 		<div class="window__title">We’re here to help.</div>
 		<div class="window__info">Let us know if you need help withanything, and our support team will do their best to assist you. </div>
@@ -234,9 +234,21 @@
 		<div class="input-wrap">
 			<textarea class="input textarea" placeholder="Comments"></textarea>
 		</div>
-		<input type="submit" class="btn btn_red" value="SEND AWAY!">
+		<button class="btn btn_red" onclick="sendMessage();">SEND AWAY!</button>
 		<button class="window__close js-window-close"></button>
 	</div>
+	<div class="window js-window-message" style="display:none">
+		<div class="window__title">Thank you for contacting us. </div>
+		<div class="window__info">Be on the lookout! We will be contacting you soon with answers. </div>
+		<button class="window__close js-window-close"></button>
+	</div>
+	<script>
+		function sendMessage() {
+			$(".window").hide();
+			$(".js-window-message").show();
+		}
+	</script>
 </div>
+
 </body>
 </html>
