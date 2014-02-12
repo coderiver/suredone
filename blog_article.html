@@ -8,36 +8,49 @@
 	<link href='http://fonts.googleapis.com/css?family=Asap:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" media="screen" href="css/screen.css" >
-	<script src="js/scripts.min.js"></script>
+	<script src="js/scripts.js"></script>
 </head>
 <body>
 <!-- BEGIN  out-->
 <div class="l-layout">
-	<header class="header">
-		<div class="header__main">
+	<header class="header js-sticky-header">
+		<div class="header__in">
 			<div class="l-container">
 				<a href="#" class="header__logo"></a>
+				<div class="header__number">888.456.7890</div>
 				<nav class="header__nav">
 					<a href="#">Pricing</a>
 					<a href="#">Features</a>
-					<a href="#">Guides & Tutorials</a>
-					<a href="#" class="is-active">Blog</a>
+					<a href="#">Tutorials</a> 
 					<a href="#">Contact</a>
+					<a href="#">Log In</a>
 				</nav>
 				<select class="header__select">
 					<option value="Pricing">Pricing</option>
 					<option value="Features">Features</option>
-					<option value="Guides & Tutorials">Guides & Tutorials</option>
-					<option value="Blog">Blog</option>
+					<option value="Tutorials">Tutorials</option>
 					<option value="Contact">Contact</option>
+					<option value="Log In">Log In</option>
 				</select>
 			</div>
 		</div>
 	</header>
+	<div class="try try_main js-sticky-try">
+		<div class="try__in">
+			<div class="l-container">
+				<div class="try__btn">
+					<a href="#" class="btn btn_red">TRY SUREDONE!</a>
+				</div>
+				<div class="try__info">
+					Request a guided tour of the <strong>SureDone</strong> eCommerce platform. 
+				</div>
+			</div>
+		</div>
+	</div>
 	<div class="l-cols l-container">
 		<aside class="sidebar">
 			<div class="sidebar__links">
-				<a href="#" class="sidebar__key">[collapse]</a>
+				<a href="#" class="sidebar__key js-hide-sidebar">[collapse]</a>
 			</div>
 			<div class="feedback feedback_mod">
 				<div class="feedback__title">Sign up for free blog updates!</div>
@@ -57,6 +70,7 @@
 				<li><a href="#">Green Eggs</a></li>
 				<li><a href="#">And Ham</a></li>
 			</ul>
+			<button class="sidebar-show js-show-sidebar">[expand]</button>
 		</aside>
 		<div class="main">
 			<article class="post-cont">

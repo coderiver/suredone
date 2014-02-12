@@ -8,37 +8,46 @@
 	<link href='http://fonts.googleapis.com/css?family=Asap:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" media="screen" href="css/screen.css" >
-	<script src="js/scripts.min.js"></script>
+	
+	<script src="js/scripts.js"></script>
+	
 </head>
 <body>
 
 <!-- BEGIN  out-->
 <div class="l-layout">
-	<header class="header">
-		<div class="header__main">
+	<header class="header js-sticky-header">
+		<div class="header__in">
 			<div class="l-container">
 				<a href="#" class="header__logo"></a>
+				<div class="header__number">888.456.7890</div>
 				<nav class="header__nav">
-					<a href="features.html">Pricing</a>
-					<a href="features.html">Features</a>
-					<a href="guides-and-tutorials_article.html">Guides & Tutorials</a>
-					<a href="blog.html">Blog</a>
+					<a href="#">Pricing</a>
+					<a href="#">Features</a>
+					<a href="#">Tutorials</a> 
 					<a href="#">Contact</a>
+					<a href="#">Log In</a>
 				</nav>
 				<select class="header__select">
 					<option value="Pricing">Pricing</option>
 					<option value="Features">Features</option>
-					<option value="Guides & Tutorials">Guides & Tutorials</option>
-					<option value="Blog">Blog</option>
+					<option value="Tutorials">Tutorials</option>
 					<option value="Contact">Contact</option>
+					<option value="Log In">Log In</option>
 				</select>
 			</div>
 		</div>
 	</header>
-	<div class="message">
-		<div class="l-container">
-			TRY SUREDONE
-			<button class="message__close"></button>
+	<div class="try try_main js-sticky-try">
+		<div class="try__in">
+			<div class="l-container">
+				<div class="try__btn">
+					<a href="#" class="btn btn_red">TRY SUREDONE!</a>
+				</div>
+				<div class="try__info">
+					Request a guided tour of the <strong>SureDone</strong> eCommerce platform. 
+				</div>
+			</div>
 		</div>
 	</div>
 	<div class="benefit">	
@@ -54,7 +63,15 @@
 	</div>
 	<div class="advant-wrap">	
 		<div class="l-container">
-			<div class="advant-row">
+			<div class="cycle-slideshow" 
+			    data-cycle-fx="carousel"
+			    data-cycle-timeout="0"
+			    data-cycle-carousel-visible="6"
+			    data-cycle-slides="> a"
+			    data-cycle-swipe=true
+			    data-cycle-prev=".js-advant-prev"
+			    data-cycle-next=".js-advant-next"
+			>
 				<a href="#" class="advant">
 					<div class="advant__icon">
 						<i class="icon-phone"></i>
@@ -91,8 +108,6 @@
 					</div>
 					<span>Amazon / eBay Integration</span>
 				</a>
-			</div>
-			<div class="advant-row">
 				<a href="#" class="advant">
 					<div class="advant__icon">
 						<i class="icon-cart"></i>
@@ -130,6 +145,8 @@
 					<span>...and much more!</span>
 				</a>
 			</div>
+			<button class="advant-nav__prev js-advant-prev"></button>
+			<button class="advant-nav__next js-advant-next"></button>
 		</div>
 	</div>
 	<div class="video video_simple">

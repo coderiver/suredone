@@ -8,36 +8,43 @@
 	<link href='http://fonts.googleapis.com/css?family=Asap:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" media="screen" href="css/screen.css" >
-	<script src="js/scripts.min.js"></script>
+	<script src="js/scripts.js"></script>
 </head>
-<body class="is-window-open">
+<body>
 <!-- BEGIN  out-->
 <div class="l-layout">
-	<header class="header">
-		<div class="header__main">
+	<header class="header js-sticky-header">
+		<div class="header__in">
 			<div class="l-container">
 				<a href="#" class="header__logo"></a>
+				<div class="header__number">888.456.7890</div>
 				<nav class="header__nav">
 					<a href="#">Pricing</a>
 					<a href="#">Features</a>
-					<a href="#" class="is-active">Guides & Tutorials</a>
-					<a href="#">Blog</a>
+					<a href="#">Tutorials</a> 
 					<a href="#">Contact</a>
+					<a href="#">Log In</a>
 				</nav>
 				<select class="header__select">
 					<option value="Pricing">Pricing</option>
 					<option value="Features">Features</option>
-					<option value="Guides & Tutorials">Guides & Tutorials</option>
-					<option value="Blog">Blog</option>
+					<option value="Tutorials">Tutorials</option>
 					<option value="Contact">Contact</option>
+					<option value="Log In">Log In</option>
 				</select>
 			</div>
 		</div>
 	</header>
-	<div class="message">
-		<div class="l-container">
-			TRY SUREDONE
-			<button class="message__close"></button>
+	<div class="try try_main js-sticky-try">
+		<div class="try__in">
+			<div class="l-container">
+				<div class="try__btn">
+					<a href="#" class="btn btn_red">TRY SUREDONE!</a>
+				</div>
+				<div class="try__info">
+					Request a guided tour of the <strong>SureDone</strong> eCommerce platform. 
+				</div>
+			</div>
 		</div>
 	</div>
 	<div class="info-section">
@@ -54,7 +61,7 @@
 				</div>
 				<div class="search__btn">
 					<input type="submit" class="btn btn_red" value="SEARCH">
-					<button class="btn btn_blue">SUPPORT</button>
+					<button class="btn btn_blue js-popup-key" data-popup="js-popup-support">SUPPORT</button>
 				</div>
 			</div>
 			<div class="service-items">
@@ -213,8 +220,8 @@
 		</div> 
 	</div>
 </footer>
-<div class="overlay js-overlay" style="display:block"></div>
-<div class="window-wrap js-window-wrap" style="display:block">
+<div class="overlay js-overlay"></div>
+<div class="window-wrap window-wrap_support js-window-wrap js-popup-support">
 	<div class="window">
 		<div class="window__title">We’re here to help.</div>
 		<div class="window__info">Let us know if you need help withanything, and our support team will do their best to assist you. </div>
@@ -227,9 +234,21 @@
 		<div class="input-wrap">
 			<textarea class="input textarea" placeholder="Comments"></textarea>
 		</div>
-		<input type="submit" class="btn btn_red" value="SEND AWAY!">
+		<button class="btn btn_red" onclick="sendMessage();">SEND AWAY!</button>
 		<button class="window__close js-window-close"></button>
 	</div>
+	<div class="window js-window-message" style="display:none">
+		<div class="window__title">Thank you for contacting us. </div>
+		<div class="window__info">Be on the lookout! We will be contacting you soon with answers. </div>
+		<button class="window__close js-window-close"></button>
+	</div>
+	<script>
+		function sendMessage() {
+			$(".window").hide();
+			$(".js-window-message").show();
+		}
+	</script>
 </div>
+
 </body>
 </html>

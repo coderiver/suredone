@@ -9,31 +9,45 @@
 	<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" media="screen" href="css/screen.css" >
 	<script src="js/scripts.min.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script>
 </head>
 <body>
 <!-- BEGIN  out-->
 <div class="l-layout">
-	<header class="header">
-		<div class="header__main">
+	<header class="header js-sticky-header">
+		<div class="header__in">
 			<div class="l-container">
 				<a href="#" class="header__logo"></a>
+				<div class="header__number">888.456.7890</div>
 				<nav class="header__nav">
-					<a href="features.html">Pricing</a>
-					<a href="features.html">Features</a>
-					<a href="guides-and-tutorials_article.html">Guides & Tutorials</a>
-					<a href="blog.html">Blog</a>
+					<a href="#">Pricing</a>
+					<a href="#">Features</a>
+					<a href="#">Tutorials</a> 
 					<a href="#">Contact</a>
+					<a href="#">Log In</a>
 				</nav>
 				<select class="header__select">
 					<option value="Pricing">Pricing</option>
 					<option value="Features">Features</option>
-					<option value="Guides & Tutorials">Guides & Tutorials</option>
-					<option value="Blog">Blog</option>
+					<option value="Tutorials">Tutorials</option>
 					<option value="Contact">Contact</option>
+					<option value="Log In">Log In</option>
 				</select>
 			</div>
 		</div>
 	</header>
+	<div class="try try_main js-sticky-try">
+		<div class="try__in">
+			<div class="l-container">
+				<div class="try__btn">
+					<a href="#" class="btn btn_red">TRY SUREDONE!</a>
+				</div>
+				<div class="try__info">
+					Request a guided tour of the <strong>SureDone</strong> eCommerce platform. 
+				</div>
+			</div>
+		</div>
+	</div>
 	<div class="map">
 		<div class="l-container">
 			<div class="popup popup_static">
@@ -55,14 +69,56 @@
 			</div>
 		</div>
 		<div class="map__wrap">
-			<iframe width="100%" height="100%" frameborder="0" scrolling="yes" marginheight="0" marginwidth="0" src="https://maps.google.co.uk/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=&amp;sll=39.017373,-105.014734&amp;sspn=30.455658,67.631836&amp;ie=UTF8&amp;ll=49.368066,16.918945&amp;spn=12.829733,33.815918&amp;t=m&amp;z=6&amp;output=embed"></iframe>
-			<i class="point" style="left:50%;margin-left:-6;top: 210px"></i>
-			<div class="tooltip" style="left:50%;margin-left: -71px;top: 120px">
-				<p>SureDone</p>
-				<p>123 This Street.</p>
-				<p>Townsville, WE 45667</p>
-				<p>321.456.7891</p>
-			</div>
+			<div id="map-canvas" class="google-map"></div>
+			<!-- <div class="tooltip" style="left:50%;margin-left: -57px;top: 120px">
+				<p>115 E.23rd Street </p>
+				<p>3rd. Floor </p>
+				<p>New York, NY</p>
+				<p>10010</p>
+			</div> -->
+			
+			<script>
+			  function initialize() {
+			    var mapOptions = {
+			      zoom: 16,
+			      center: new google.maps.LatLng(40.743321,-73.993322),
+			      disableDefaultUI: true,
+			      scrollwheel: false,
+			     zoomControl: true,
+			    zoomControlOptions: {
+			        style: google.maps.ZoomControlStyle.DEFAULT
+			      },
+			      mapTypeId: google.maps.MapTypeId.ROADMAP
+			    }
+			    var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+			    var image = 'img/marker.png';
+			    var myLatLng = new google.maps.LatLng(40.743321,-73.993322);
+			    var marker = new google.maps.Marker({
+				      position: myLatLng,
+				      map: map,
+				      title: 'Uluru (Ayers Rock)',
+				      icon: image
+				});
+			    var contentString =	'<div>'
+						+'<p>115 E.23rd Street </p>'
+						+'<p>3rd. Floor </p>'
+						+'<p>New York, NY</p>'
+						+'<p>10010</p>'+
+					'</div>';
+			  	var infowindow = new google.maps.InfoWindow({
+				    content: contentString
+				});
+				google.maps.event.addListener(marker, 'click', function() {
+				    infowindow.open(map,marker);
+				});
+			  }
+			  google.maps.event.addDomListener(window, 'load', initialize);
+			  google.maps.event.addDomListener(window, "resize", function() {
+				 var center = map.getCenter();
+				 google.maps.event.trigger(map, "resize");
+				 map.setCenter(center); 
+			});
+			</script>
 		</div>
 	</div>
 	<div class="comandos">
