@@ -92,13 +92,88 @@
 		position: absolute
 		left: 42px
 		top: 0
-		
+
+.price-section
+	padding: 3.2% 3.3%
+.price-wrap
+	font-size: 0
+	text-align: justify
+	&:after
+		content: ""
+		display: inline-block
+		width: 100%
+		height: 0
+		overflow: visible 
+.price-section__top
+	width: 68%
+	margin: 0 auto 5.8% 
+	font-size: 16px
+	text-align: center
+	+r(w1180)
+		width: 100%
+	.title
+		margin-bottom: 15px
+.price
+	position: relative
+	display: inline-block
+	padding-top: 7%
+	width: 24.9%
+	height: 477px
+	font-size: 16px
+	border-top: 1px solid #4f9fc5 
+	border-bottom: 1px solid #4f9fc5
+	text-align: center
+	+box-shadow(inset 0 1px 0 #e7e8e9, 0 1px 0 #e7e8e9)
+	+box
+.price_pop
+	border-color: $gray
+	.price__main
+		background: $gray
+		strong
+			color: $red 
+	.price__info
+		font-weight: bold
+.price__top
+	position: absolute
+	top: 7%
+	left: 0
+	right: 0
+	text-align: center
+	font-size: 12px
+	color: $red
+	letter-spacing: 1px
+	font-weight: bold  
+.price__main
+	margin-bottom: 26px 
+	height: 135px
+	line-height: 135px
+	background: $blue
+	+border-radius(5px) 
+	div
+		display: inline-block
+		vertical-align: middle
+		line-height: 1
+	strong
+		display: block
+		margin-bottom: 5px
+		font-size: 40px
+	span
+		font-size: 24px
+		color: $light 
+		+font2
+	sup
+		font-size: 24px
+		vertical-align: top
+.price__info
+	margin-bottom: 20.5%
+	font-size: 16px
+	line-height: 1.6
 .promo
 	padding: 3.4% 0 5% 
 	background: $light
 	.l-container
 		padding: 0 3.1% 
-		+clr 
+		+clr  
 		+r(w760)
 			padding: 0 5px 
 .promo__title
