@@ -11443,8 +11443,9 @@ $(document).ready(function() {
     });
     if ($(window).width() > 960) {
     	$(".js-key-feedback").on("click", function(){
+    		alert('a');
 	    	$('html, body').animate({
-	            scrollTop: 200
+	            scrollTop: 220
 	        }, 500);
 	    });
     }
