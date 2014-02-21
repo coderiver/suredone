@@ -1,5 +1,10 @@
 $(document).ready(function() {
-
+    $('.try__btn').click(function(event) {
+        $('body,html').animate({
+                scrollTop: 0
+            }, 800);
+        return false
+    });
     $(document).click(function() {
         $(".js-window-wrap ").hide();
         $(".js-overlay").hide();

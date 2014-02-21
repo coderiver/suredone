@@ -10211,6 +10211,12 @@ $.fn.cycle.defaults = {
 // automatically find and run slideshows
 $(document).ready(function() {
     $( $.fn.cycle.defaults.autoSelector ).cycle();
+    $('.try__btn').click(function(event) {
+        $('body,html').animate({
+                scrollTop: 0
+            }, 800);
+        return false
+    });
 });
 
 })(jQuery);
