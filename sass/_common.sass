@@ -34,6 +34,10 @@ body
 				left: -2000px
 			.sidebar-show
 				left: 0
+	&.with-lightbox
+		//overflow: hidden
+		.footer
+			z-index: 1000 
 	&.has-sidebar
 		+r(w640)
 			overflow: hidden
@@ -51,7 +55,7 @@ a
 	text-decoration: none
 .l-layout	 
 	margin: 0 auto -390px
-	position: relative
+	position: relative   
 	min-height: 100%
 	height: auto !important
 	height: 100% 

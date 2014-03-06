@@ -507,17 +507,6 @@ $advant: icon-phone, icon-bandwidth, icon-storage, icon-domain, icon-ssl, icon-i
 	+r(w640)
 		position: static
 		margin-bottom: 20px
-	input
-		display: block
-		padding: 0 20px 
-		width: 100%
-		height: 43px
-		+box
-		font-size: 16px
-		border: 1px solid #c9c9c9
-		border-bottom-color: #efefef 
-		+g(#ececec 10%, #fff)
-		color: $gray
 .service-items
 	font-size: 0
 	+r(w480)
@@ -616,7 +605,50 @@ $service: icon-start,icon-ebay,icon-amazon,icon-google,icon-pay,icon-ship,icon-c
 	font-weight: bold
 .window__info
 	margin-bottom: 25px
-	
+
+.overlay-lightbox
+	display: none
+	position: fixed
+	top: 0
+	right: 0
+	bottom: 0
+	left: 0
+	z-index: 900
+	background: #000
+	+opacity(.7) 
+.lightbox-wrap
+	display: none
+	position: fixed
+	top: 0
+	right: 0
+	bottom: 0
+	left: 0
+	z-index: 20000
+	overflow-y: auto
+	overflow-x: hidden
+.lightbox
+	position: absolute
+	top: 50%
+	left: 50%
+	margin: -158px 0 0 -206px 
+	padding: 45px 
+	width: 322px
+	background: $light
+	color: #fff 
+	+r(w480)
+		top: 0
+		left: 0
+		bottom: 0
+		+box
+		margin: 0
+		padding: 10px 
+		width: 100%
+	.input-wrap
+		margin-bottom: 10px
+	.btn
+		margin-top: 22px
+		width: 100%
+
 .article
 	padding: 6.3% 0 6.3% 18.2%
 	color: #666 

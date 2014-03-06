@@ -3,14 +3,14 @@
 <!--[if gt IE 8]><!--><html><!--<![endif]-->
 <head>
 	<meta charset="utf-8">
-	<title>guides-and-tutorials_support</title>
+	<title>lightbox</title>
 	<meta name="viewport" content="initial-scale=1"/>
 	<link href='http://fonts.googleapis.com/css?family=Asap:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" media="screen" href="css/screen.css" >
 	<script src="js/scripts.js"></script>
 </head>
-<body>
+<body class="with-lightbox">
 <!-- BEGIN  out-->
 <div class="l-layout">
 	<!-- BEGIN HEADER AREA -->
@@ -225,34 +225,20 @@
 </footer>
 <!-- END FOOTER AREA -->
 <div class="overlay-sidebar js-sidebar-overlay"></div>
-<div class="overlay js-overlay"></div>
-<div class="window-wrap window-wrap_support js-window-wrap js-popup-support">
-	<div class="window">
-		<div class="window__title">We’re here to help.</div>
-		<div class="window__info">Let us know if you need help withanything, and our support team will do their best to assist you. </div>
+<div class="overlay-lightbox js-overlay" style="display:block"></div>
+<div class="lightbox-wrap js-window-wrap" style="display:block">	
+	<div class="lightbox">
 		<div class="input-wrap">
-			<input type="text" class="input" placeholder="Name">
+			<input type="text" class="input-nice" placeholder="Name">
 		</div>
 		<div class="input-wrap">
-			<input type="text" class="input" placeholder="Email">
+			<input type="email" class="input-nice" placeholder="Email">
 		</div>
 		<div class="input-wrap">
-			<textarea class="input textarea" placeholder="Comments"></textarea>
+			<input type="text" class="input-nice" placeholder="Company">
 		</div>
-		<button class="btn btn_red" onclick="sendMessage();">SEND AWAY!</button>
-		<button class="window__close js-window-close"></button>
+		<input type="submit" class="btn btn_red" value="SUBMIT">
 	</div>
-	<div class="window js-window-message" style="display:none">
-		<div class="window__title">Thank you for contacting us. </div>
-		<div class="window__info">Be on the lookout! We will be contacting you soon with answers. </div>
-		<button class="window__close js-window-close"></button>
-	</div>
-	<script>
-		function sendMessage() {
-			$(".window").hide();
-			$(".js-window-message").show();
-		}
-	</script>
 </div>
 
 </body>

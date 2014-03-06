@@ -11435,6 +11435,9 @@ $(document).ready(function() {
 	window_wrap.find('.window').click(function(event){
         event.stopPropagation();
     });
+    window_wrap.find('.lightbox').click(function(event){
+        event.stopPropagation();
+    });
     window_close.on("click", function(){
     	$(this).parents(".js-window-wrap").hide();
     	overlay.hide();
@@ -11449,7 +11452,6 @@ $(document).ready(function() {
     });
     if ($(window).width() > 960) {
     	$(".js-key-feedback").on("click", function(){
-    		alert('a');
 	    	$('html, body').animate({
 	            scrollTop: 220
 	        }, 500);
