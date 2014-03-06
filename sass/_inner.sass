@@ -719,8 +719,12 @@ $service: icon-start,icon-ebay,icon-amazon,icon-google,icon-pay,icon-ship,icon-c
 			vertical-align: middle
 			margin-right: 14px
 		+r(w480)
-			display: none
-			
+			display: none 
+.article__title
+	color: $gray
+	span
+		font-size: 19px	
+		color: $gray
 .post-cont
 	padding: 9% 4.5% 4%
 	img
@@ -992,3 +996,30 @@ $options: opt-phone, opt-bandwidth, opt-storage, opt-domain, opt-ssl, opt-integr
 @each $i in $options  
 	.#{$i}  
 		+s($i) 
+
+.list-links
+	margin-top: 25px
+	li
+		margin-bottom: 5px
+	a
+		color: #666
+		font-size: 24px 
+		text-decoration: underline
+		+r(w860)
+			font-size: 20px
+		+r(w640)
+			font-size: 16px
+		&:hover
+			text-decoration: none  
+.partners-wrap
+	margin: 0 auto 
+	max-width: 984px
+	padding: 2.8% 0 
+	background: #f0f0ef 
+	+clr
+	.title
+		text-align: center
+.partner
+	height: 288px
+	border-top: 1px solid #3b414e
+	border-bottom: 1px solid #3b414e
