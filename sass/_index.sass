@@ -94,7 +94,7 @@
 		top: 0
 
 .price-section
-	padding: 3.2% 3.3%
+	padding: 3.5% 3.3%
 .price-section_mod
 	padding: 3.2% 0
 	+r(w1024)
@@ -103,8 +103,9 @@
 		padding: 3.2% 5px
 .price-wrap
 	font-size: 0
+	background: $light 
 	text-align: justify
-	+r(w560)	
+	+r(w560)	 
 		overflow: hidden
 	&:after
 		content: ""
@@ -150,6 +151,9 @@
 		height: auto
 		display: block
 		margin: 0 auto 20px
+	.btn
+		border: 2px solid #fff
+		+box-shadow(none)
 
 .price_pop
 	border-color: $gray
