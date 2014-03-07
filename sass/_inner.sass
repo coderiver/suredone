@@ -155,7 +155,18 @@
 	i
 		+inline-block
 .advant__icon
+	position: relative
 	height: 55px
+	&:hover
+		&:after
+			content: ""
+			position: absolute
+			bottom: 5px
+			left: 50%
+			margin-left: -35%
+			width: 70%
+			height: 2px
+			background: #fff  
 $advant: icon-phone, icon-bandwidth, icon-storage, icon-domain, icon-ssl, icon-integr, icon-cart, icon-car, icon-acc, icon-sale, icon-stat, icon-more
 @each $i in $advant
 	.#{$i} 
