@@ -79,8 +79,13 @@
 	+font
 	font-size: 12px
 	+tr(all .2s linear)
+	+placeholder
+		color: #d8d8d8 
+		font-size: 13px
+		+font
 	&:focus
 		border: 1px solid $blue_dark
+		
 .textarea
 	padding: 11px 
 	resize: vertical
@@ -156,3 +161,96 @@
 	+tr(border .2s linear)
 	&:focus
 		border-color: #ddd
+		
+.select
+	position: relative
+	display: block
+	width: 100%
+	select
+		position: absolute
+		z-index: 3
+		top: -1px
+		right: 0
+		left: 1px
+		width: 100%
+		height: 33px
+		+box
+		opacity: 0
+	option
+		height: 30px
+	.input
+		padding-right: 33px
+	&.is-open
+		.input,
+		.select__btn
+			border-color: #3d899e
+			&:after
+				+rotate(-180)
+				+arr(12,6,#3d899e,b) 
+.select__btn
+	position: absolute
+	z-index: 2
+	top: 0
+	bottom: 0
+	right: 0
+	width: 31px
+	background: none
+	+tr(all .2s linear)
+	border-left: 1px solid #d8d8d8 
+	&:after
+		content: ""
+		position: absolute
+		top: 50%
+		left: 50% 
+		+rotate(.0001)
+		margin: -3px 0 0 -6px
+		+arr(12,6,#d8d8d8,b) 
+		+tr(all .2s linear)
+.select_half
+	float: right
+	width: 42.1%
+	&:first-child
+		float: left
+		
+.checkbox
+	position: relative
+	font-size: 13px
+	font-weight: bold
+	input
+		position: absolute
+		left: 0
+		top: 0
+		z-index: 2
+		width: 14px
+		height: 14px
+		opacity: 0
+		&:checked
+			+ span
+				&:after
+					content: ""
+					position: absolute
+					top: 4px
+					left: 4px
+					width: 6px
+					height: 6px
+					+border-radius(50%)  
+					background: #fff 
+					+box-shadow(inset 1px 1px 1px rgba(0,0,0,.3))
+	span
+		position: relative
+		padding-left: 33px
+		+r(w640)
+			padding-left: 20px
+		&:before
+			content: ""
+			position: absolute
+			left: 0
+			top: 0
+			width: 14px
+			height: 14px
+			background: #52869f
+			+border-radius(50%)  
+	a
+		color: $blue
+		&:hover
+			text-decoration: underline

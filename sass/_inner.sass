@@ -1105,11 +1105,13 @@ $options: opt-phone, opt-bandwidth, opt-storage, opt-domain, opt-ssl, opt-integr
 	+r(w900)
 		width: 22%
 	+r(w640)
-		width: 41%
+		width: 28%
+		height: 250px
 		margin-right: 5%
 	+r(w480)
-		width: 100%
-		margin-right: 0
+		font-size: 13px
+		//width: 100%
+		//margin-right: 0
 	&.is-active
 		span
 			color: $blue 
@@ -1122,10 +1124,18 @@ $options: opt-phone, opt-bandwidth, opt-storage, opt-domain, opt-ssl, opt-integr
 	a
 		display: block
 		margin: 0 auto 
+		max-width: 100%
 		text-decoration: none
 		height: 160px
 		margin-bottom: 30px
+		+background-size(100% auto)
 		background-repeat: no-repeat 
+		+r(w900)
+			height: 115px
+		+r(w640)
+			height: 100px
+		+r(w480)
+			height: 80px
 	span
 		display: block
 		margin-bottom: 23px
@@ -1149,3 +1159,136 @@ $options: opt-phone, opt-bandwidth, opt-storage, opt-domain, opt-ssl, opt-integr
 .img-nav__link3
 	max-width: 239px
 	background-image: url(../img/img-nav3.png)
+	
+.help-info
+	padding: 2.5% 0 
+	background: $light
+	font-size: 13px
+	+r(w640)
+		padding: 2.5% 10px 
+	h4
+		margin: 5px 0 
+		text-transform: uppercase
+	span
+		color: $red
+	p
+		margin: 24px 0   
+	.l-container
+		max-width: 980px
+		
+.form-checkout
+	padding: 3.3% 0 
+	background: #fff
+	+r(w1180)
+		padding: 3.3% 10px
+	.l-container
+		+clr
+		max-width: 980px
+.form-checkout__col
+	float: left
+	margin-left: 7%
+	width: 40%
+	&:first-child
+		margin-left: 0
+		+r(w640)
+			float: left
+		+r(w480)
+			float: none
+	+r(w640)
+		width: 46%
+		float: right
+		margin-left: 0
+	+r(w480)
+		width: 100%
+		float: none
+
+.field
+	margin-bottom: 11px
+	font-size: 0
+	+r(w640)
+		margin-bottom: 15px
+.field__text
+	display: inline-block
+	vertical-align: middle
+	width: 35.8%
+	font-size: 13px
+	font-weight: bold
+	text-align: right
+	min-height: 1px
+	+box
+	padding-right: 20px
+	+r(w640)
+		display: block
+		margin-bottom: 5px
+		width: auto
+		text-align: left
+	i
+		font-style: normal
+		color: $red 
+.field__main
+	display: inline-block
+	width: 64.2%
+	vertical-align: middle
+	+clr  
+	+r(w640)
+		display: block
+		width: 100%
+	.checkbox
+		margin-left: -33px
+		+r(w640)
+			margin-left: 0
+		
+.total
+	padding: 3.3% 0 6%
+	background: #f0f0ef
+	font-size: 16px
+	+r(w640)
+		padding: 3.3% 10px 6% 
+	.l-container
+		max-width: 980px
+.total__title
+	margin-bottom: 14px
+	font-size: 13px
+	text-transform: uppercase
+.total__item
+	float: right
+	padding: 0 4% 
+	width: 41%
+	min-height: 195px
+	background: #5387a0 
+	+r(w640)
+		float: none
+		padding: 20px 
+		min-height: 50px
+		margin: 0 0 20px 
+		width: auto 
+	&:first-child
+		float: left   
+		+r(w640)
+			float: none
+.total__table	
+	margin-top: 34px
+	font-size: 13px
+	color: $light
+	font-weight: bold 
+	border-bottom: 2px solid $light 
+	+r(w640)
+		margin-top: 5px
+	td
+		padding: 2px 0 
+		&:first-child
+			width: 59%
+		&:last-child
+			text-align: right
+	tr
+		&:last-child
+			td
+				padding-bottom: 24px
+.total__table_last
+	margin-top: 19px
+	border-bottom: 0
+.total__info
+	float: right
+	margin-top: 3%
+	width: 49%
+	font-size: 13px

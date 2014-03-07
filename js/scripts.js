@@ -11420,6 +11420,7 @@ $(document).ready(function() {
         $(".js-window-wrap ").hide();
         $(".js-overlay").hide();
         $("body").removeClass("is-window-open");
+        $(".js-select").removeClass("is-open");
     });
 	var
 		window_wrap = $(".js-window-wrap");
@@ -11534,5 +11535,14 @@ $(document).ready(function() {
             }, 800);
         return false
     });
+
+    $(".js-select select").on("change", function(){
+    	var val = $(this).val();
+    	$(this).parent().find(".js-select-input").val(val);
+    });
+    $(".js-select").on("click", function(event){
+    	$(this).toggleClass("is-open");
+    	event.stopPropagation();
+    });	
 });
 
